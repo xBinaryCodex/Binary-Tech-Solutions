@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Things Your Law Firm's Network Is Probably Doing Wrong | Binary T Solutions</title>
+  <meta name="description" content="Most small law firms have the same five network security problems. Here's what they are, why they matter, and how to fix them before they become a $100,000 problem.">
+  <meta property="og:title" content="5 Things Your Law Firm's Network Is Probably Doing Wrong">
+  <meta property="og:description" content="Most small law firms have the same five network security problems. Here's what they are and how to fix them.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://binarytsolutions.com/blog/5-law-firm-network-mistakes.html">
+  <link rel="canonical" href="https://binarytsolutions.com/blog/5-law-firm-network-mistakes.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A0E1A;
+      --bg2: #0F1629;
+      --accent: #00D4FF;
+      --green: #00FF88;
+      --text: #E8EAF0;
+      --muted: #8892A4;
+      --border: #1E2A3A;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.8; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    nav .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--accent); }
+    nav .back { color: var(--muted); font-size: 0.9rem; }
+    nav .back:hover { color: var(--accent); }
+
+    .hero {
+      background: linear-gradient(135deg, var(--bg2) 0%, #0A1628 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+    .category-tag {
+      display: inline-block;
+      background: rgba(0, 212, 255, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      padding: 0.3rem 1rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; max-width: 800px; margin: 0 auto 1.5rem; line-height: 1.2; }
+    .meta { color: var(--muted); font-size: 0.9rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+    .meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+    .article-body { max-width: 740px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .article-body p { margin-bottom: 1.5rem; color: #C8D0DC; }
+    .article-body h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--text); margin: 2.5rem 0 1rem; padding-left: 1rem; border-left: 3px solid var(--accent); }
+    .article-body h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--accent); margin: 1.5rem 0 0.5rem; }
+    .article-body ul, .article-body ol { padding-left: 1.5rem; margin-bottom: 1.5rem; color: #C8D0DC; }
+    .article-body li { margin-bottom: 0.5rem; }
+    .article-body strong { color: var(--text); font-weight: 600; }
+
+    .callout { background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.2); border-radius: 8px; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .callout p { margin: 0; color: var(--text); }
+    .callout-label { color: var(--accent); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+
+    .warning { background: rgba(255, 80, 80, 0.05); border: 1px solid rgba(255, 80, 80, 0.2); border-radius: 8px; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .warning p { margin: 0; color: #C8D0DC; }
+    .warning-label { color: #FF6B6B; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+
+    .number-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; display: flex; gap: 1.5rem; align-items: flex-start; }
+    .number { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--accent); line-height: 1; min-width: 50px; }
+    .number-content h3 { margin: 0 0 0.5rem; color: var(--text); font-family: 'Space Grotesk', sans-serif; }
+    .number-content p { margin: 0; color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+
+    .cta-box { background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 255, 136, 0.05)); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 16px; padding: 2.5rem; text-align: center; margin: 3rem 0; }
+    .cta-box h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; }
+    .cta-box p { color: var(--muted); margin-bottom: 1.5rem; }
+    .btn { display: inline-block; background: var(--accent); color: #0A0E1A; font-weight: 700; padding: 0.9rem 2rem; border-radius: 8px; font-size: 1rem; transition: opacity 0.2s; }
+    .btn:hover { opacity: 0.85; text-decoration: none; }
+
+    footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer a { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .number-card { flex-direction: column; gap: 0.5rem; }
+      .hero { padding: 2.5rem 1.5rem 2rem; }
+      .article-body { padding: 2rem 1.5rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="logo">Binary T Solutions</span>
+  <a href="../index.html" class="back">← Back to Home</a>
+</nav>
+
+<header class="hero">
+  <div class="category-tag">Password Security</div>
+  <h1>5 Things Your Law Firm's Network Is Probably Doing Wrong</h1>
+  <div class="meta">
+    <span>Jose — Binary T Solutions</span>
+    <span>January 2026</span>
+    <span>8 min read</span>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <p>I've assessed a lot of small office networks. And I'll tell you something that might surprise you: most of them have the same five problems. Not variations of the same problems — the <strong>exact same problems</strong>, almost every time.</p>
+
+  <p>That's actually good news. It means if you fix these five things, you're already ahead of the majority of small law firms in San Antonio. It also means a breach, if one happens, was almost certainly preventable.</p>
+
+  <p>Here's what I find — and what you should check right now.</p>
+
+  <div class="number-card">
+    <div class="number">01</div>
+    <div class="number-content">
+      <h3>Default credentials still on network devices</h3>
+      <p>Your router, your wireless access point, your network switch — every one of these shipped from the factory with a default username and password. Usually something like admin/admin or admin/password. These are publicly listed in manufacturer documentation anyone can Google.</p>
+    </div>
+  </div>
+
+  <p>When I run a basic network scan on a new client's office, finding at least one device still running default credentials happens more often than not. Sometimes it's the router. Sometimes it's a printer with a web interface. Sometimes it's an old wireless access point someone forgot was even still active.</p>
+
+  <div class="warning">
+    <div class="warning-label">Why this matters</div>
+    <p>An attacker on your network — or sometimes even from outside it — can log into that device and redirect all your internet traffic, intercept emails, or use your network as a launchpad for deeper attacks. All without triggering a single alert.</p>
+  </div>
+
+  <h3>The fix</h3>
+  <p>Log into every network device in your office and change the admin password to something unique, at least 16 characters, that isn't written on a sticky note on the device itself. If you don't know how to access your devices or don't know what devices you even have — that's exactly what a Tier 1 audit is for.</p>
+
+  <div class="number-card">
+    <div class="number">02</div>
+    <div class="number-content">
+      <h3>No separation between staff Wi-Fi and guest Wi-Fi</h3>
+      <p>If a client, vendor, or delivery person connects to the same Wi-Fi network your staff uses, they can potentially see your internal devices, shared drives, and printers.</p>
+    </div>
+  </div>
+
+  <p>This is called network segmentation — or more accurately, the lack of it. Your internal network and any guest network should be completely isolated from each other using something called a VLAN (Virtual Local Area Network). When they're not, your network is essentially one flat space where any connected device can talk to any other.</p>
+
+  <p>Most modern routers support guest networks, but "guest network" in consumer router settings doesn't always mean properly isolated. I've seen plenty of offices that thought they had separation but didn't.</p>
+
+  <h3>The fix</h3>
+  <p>Verify that your guest network is actually isolated. If you're not sure, the easiest test is to connect a phone to your guest network and see if you can access your office printer or any shared drives. If you can — it's not isolated.</p>
+
+  <div class="number-card">
+    <div class="number">03</div>
+    <div class="number-content">
+      <h3>Outdated firmware on routers and access points</h3>
+      <p>Network device firmware is software. Software has vulnerabilities. Manufacturers release firmware updates to patch those vulnerabilities. Most small offices never update their router firmware — ever.</p>
+    </div>
+  </div>
+
+  <p>I regularly find routers running firmware that's two, three, sometimes five years out of date. In the security world, that's an eternity. Some of those outdated versions have publicly known vulnerabilities with working exploits that any moderately skilled attacker can use.</p>
+
+  <div class="callout">
+    <div class="callout-label">Real example</div>
+    <p>A vulnerability called CVE-2022-26376 affected certain ASUS routers and allowed attackers to execute code on the device remotely. Firmware update was available. Most affected routers never got it.</p>
+  </div>
+
+  <h3>The fix</h3>
+  <p>Log into your router's admin interface and check the current firmware version. Then go to the manufacturer's website, look up your model, and see if a newer version exists. If your router is more than 5 years old and no longer receiving updates — it's time to replace it. Budget $150-300 for a business-grade replacement.</p>
+
+  <div class="number-card">
+    <div class="number">04</div>
+    <div class="number-content">
+      <h3>Staff using personal devices with no policy</h3>
+      <p>Someone on your team is checking firm email on their personal phone. Maybe they're also accessing client files from a home laptop. That personal device almost certainly has no endpoint protection, no remote wipe capability, and no management oversight.</p>
+    </div>
+  </div>
+
+  <p>Under ABA Rule 1.6, you have an obligation to make reasonable efforts to prevent unauthorized disclosure of client information. A paralegal accessing client files from a personal laptop with outdated Windows and no antivirus is a direct violation of that standard — and you'd be hard pressed to argue otherwise if it led to a breach.</p>
+
+  <h3>The fix</h3>
+  <p>At minimum, create a written Acceptable Use Policy that defines what devices can access firm data and under what conditions. It doesn't need to be 20 pages. A one-page document that staff sign acknowledging the rules is a meaningful start and demonstrates reasonable effort.</p>
+
+  <div class="number-card">
+    <div class="number">05</div>
+    <div class="number-content">
+      <h3>No multi-factor authentication on email</h3>
+      <p>This one is the most preventable and the most damaging when it goes wrong. If your firm uses Microsoft 365 or Google Workspace without MFA enabled, a single compromised password gives an attacker full access to every email, every attachment, every client communication — going back years.</p>
+    </div>
+  </div>
+
+  <p>Business email compromise (BEC) is consistently one of the most costly cybercrimes targeting small professional firms. The attack is simple: someone gets your password through phishing or a data breach, logs into your email, and either steals information or impersonates you to commit fraud. MFA stops this cold even if the password is compromised.</p>
+
+  <div class="warning">
+    <div class="warning-label">The real cost</div>
+    <p>The FBI's Internet Crime Report shows BEC losses averaging over $120,000 per incident for small businesses. MFA is free in Microsoft 365 and Google Workspace. There is no excuse not to have it enabled.</p>
+  </div>
+
+  <h3>The fix</h3>
+  <p>Log into your Microsoft 365 or Google Workspace admin panel today and enable MFA for every account. Use an authenticator app — not SMS if you can avoid it. This takes about 20 minutes to set up across a small firm and is the single highest-ROI security action you can take.</p>
+
+  <h2>So where does your firm stand?</h2>
+
+  <p>Here's the honest truth: most law firms I assess have at least three of these five issues, and many have all five. It's not because the attorneys aren't smart — it's because network security isn't what you went to law school for. You're focused on your clients. Security falls through the cracks.</p>
+
+  <p>That's exactly why I started Binary T Solutions. A Tier 1 audit covers every one of these issues and more, gives you a plain-English report of what we found, and tells you exactly how to fix it in order of priority. It takes about two hours of your time and starts at $500.</p>
+
+  <p>If you want to know where your firm stands before you have a problem — not after — that's the conversation I'd like to have.</p>
+
+  <div class="cta-box">
+    <h2>Find out where your firm stands</h2>
+    <p>Book a free 15-minute call. I'll tell you exactly what your office needs — no sales pressure, no jargon.</p>
+    <a href="https://calendly.com/jose-binarytsolutions/30min" class="btn">Book Free Call</a>
+  </div>
+
+</article>
+
+<footer>
+  <p>© 2026 Binary T Solutions | San Antonio, TX | <a href="mailto:info@binarytsolutions.com">info@binarytsolutions.com</a></p>
+</footer>
+
+</body>
+</html>

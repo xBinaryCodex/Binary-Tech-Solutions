@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why WPA2 Is Not Enough Anymore For Professional Offices | Binary T Solutions</title>
+  <meta name="description" content="WPA2 has been the standard for Wi-Fi security for over a decade — but it has serious weaknesses that put law firms and professional offices at risk. Here's what you need to know.">
+  <meta property="og:title" content="Why WPA2 Is Not Enough Anymore For Professional Offices">
+  <meta property="og:description" content="WPA2 has serious weaknesses that put law firms at risk. Here's what you need to know and what to do about it.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://binarytsolutions.com/blog/wpa2-not-enough.html">
+  <link rel="canonical" href="https://binarytsolutions.com/blog/wpa2-not-enough.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0A0E1A;--bg2:#0F1629;--accent:#00D4FF;--green:#00FF88;--text:#E8EAF0;--muted:#8892A4;--border:#1E2A3A; }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:18px;line-height:1.8;}
+    a{color:var(--accent);text-decoration:none;}a:hover{text-decoration:underline;}
+    nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+    nav .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.2rem;color:var(--accent);}
+    nav .back{color:var(--muted);font-size:0.9rem;}nav .back:hover{color:var(--accent);}
+    .hero{background:linear-gradient(135deg,var(--bg2) 0%,#0A1628 100%);border-bottom:1px solid var(--border);padding:4rem 2rem 3rem;text-align:center;}
+    .category-tag{display:inline-block;background:rgba(0,212,255,0.1);color:var(--accent);border:1px solid rgba(0,212,255,0.3);padding:0.3rem 1rem;border-radius:100px;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1.5rem;}
+    .hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;max-width:800px;margin:0 auto 1.5rem;line-height:1.2;}
+    .meta{color:var(--muted);font-size:0.9rem;display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;}
+    .article-body{max-width:740px;margin:0 auto;padding:3rem 2rem 5rem;}
+    .article-body p{margin-bottom:1.5rem;color:#C8D0DC;}
+    .article-body h2{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:var(--text);margin:2.5rem 0 1rem;padding-left:1rem;border-left:3px solid var(--accent);}
+    .article-body h3{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:600;color:var(--accent);margin:1.5rem 0 0.5rem;}
+    .article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.5rem;color:#C8D0DC;}
+    .article-body li{margin-bottom:0.5rem;}
+    .article-body strong{color:var(--text);font-weight:600;}
+    .callout{background:rgba(0,212,255,0.05);border:1px solid rgba(0,212,255,0.2);border-radius:8px;padding:1.5rem 2rem;margin:2rem 0;}
+    .callout p{margin:0;color:var(--text);}
+    .callout-label{color:var(--accent);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;}
+    .warning{background:rgba(255,80,80,0.05);border:1px solid rgba(255,80,80,0.2);border-radius:8px;padding:1.5rem 2rem;margin:2rem 0;}
+    .warning p{margin:0;color:#C8D0DC;}
+    .warning-label{color:#FF6B6B;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;}
+    .comparison{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0;}
+    .comp-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;}
+    .comp-card.bad{border-color:rgba(255,80,80,0.3);}
+    .comp-card.good{border-color:rgba(0,255,136,0.3);}
+    .comp-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.8rem;}
+    .comp-card.bad .comp-label{color:#FF6B6B;}
+    .comp-card.good .comp-label{color:var(--green);}
+    .comp-card h3{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;color:var(--text);margin-bottom:0.5rem;}
+    .comp-card p{color:var(--muted);font-size:0.9rem;line-height:1.6;margin:0;}
+    .cta-box{background:linear-gradient(135deg,rgba(0,212,255,0.1),rgba(0,255,136,0.05));border:1px solid rgba(0,212,255,0.3);border-radius:16px;padding:2.5rem;text-align:center;margin:3rem 0;}
+    .cta-box h2{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;margin-bottom:1rem;}
+    .cta-box p{color:var(--muted);margin-bottom:1.5rem;}
+    .btn{display:inline-block;background:var(--accent);color:#0A0E1A;font-weight:700;padding:0.9rem 2rem;border-radius:8px;font-size:1rem;transition:opacity 0.2s;}
+    .btn:hover{opacity:0.85;text-decoration:none;}
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:0.85rem;}
+    footer a{color:var(--accent);}
+    @media(max-width:600px){.comparison{grid-template-columns:1fr;}.hero{padding:2.5rem 1.5rem 2rem;}.article-body{padding:2rem 1.5rem 4rem;}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="logo">Binary T Solutions</span>
+  <a href="../index.html" class="back">← Back to Home</a>
+</nav>
+
+<header class="hero">
+  <div class="category-tag">Wi-Fi Safety</div>
+  <h1>Why WPA2 Is Not Enough Anymore For Professional Offices</h1>
+  <div class="meta">
+    <span>Jose — Binary T Solutions</span>
+    <span>February 2026</span>
+    <span>7 min read</span>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <p>If your office Wi-Fi is secured with WPA2, you're probably thinking you're covered. WPA2 has been the gold standard for wireless security since 2004 — it replaced the broken WEP standard and for years it did its job well.</p>
+
+  <p>But it's 2026. WPA2 is over 20 years old, and in security terms, that's ancient. There are now well-documented attacks that can crack WPA2 networks — some of them require surprisingly little skill or equipment.</p>
+
+  <p>Here's what changed, why it matters for your law firm specifically, and what you should do about it.</p>
+
+  <h2>What WPA2 actually does — and where it fails</h2>
+
+  <p>WPA2 encrypts the traffic between your devices and your wireless router so that someone nearby can't just passively read your data out of the air. That part still works. The problem is in how WPA2 handles authentication — specifically, how it proves that a device is allowed to join the network.</p>
+
+  <p>WPA2 uses a process called a four-way handshake. When your laptop connects to your office Wi-Fi, it exchanges a series of messages with the router to establish a secure connection. Here's the problem: <strong>an attacker can capture that handshake and take it home to crack offline.</strong></p>
+
+  <div class="callout">
+    <div class="callout-label">How the attack works</div>
+    <p>An attacker sits in the parking lot of your office building with a laptop running freely available software. They either wait for a device to connect, or they force a reconnect by sending a deauthentication packet. They capture the handshake. They go home and run it against a password dictionary or brute force it. If your Wi-Fi password is a word, a name, or anything under 12 characters — it will crack.</p>
+  </div>
+
+  <p>This isn't theoretical. Tools like Hashcat running on a modern GPU can test billions of password combinations per second against a captured WPA2 handshake. A simple 8-character password can fall in minutes.</p>
+
+  <h2>The KRACK attack changed everything</h2>
+
+  <p>In 2017, security researchers discovered a fundamental flaw in the WPA2 protocol itself called KRACK — Key Reinstallation Attack. It allowed attackers in range of a WPA2 network to potentially decrypt encrypted traffic, inject data, and in some configurations intercept sensitive communications.</p>
+
+  <p>Most major operating systems were patched. But here's the catch: your router also needed a firmware update. Many routers — especially older ones in small offices — never received that update, or received it but were never rebooted to apply it.</p>
+
+  <div class="warning">
+    <div class="warning-label">Still relevant today</div>
+    <p>Unpatched KRACK vulnerabilities still exist in small office environments. If your router is more than 3-4 years old and you've never checked for firmware updates, there's a real chance it's still vulnerable.</p>
+  </div>
+
+  <h2>WPA3 — what changed and why it matters</h2>
+
+  <p>WPA3 was released in 2018 and addresses the core weaknesses of WPA2. The most important improvement is something called Simultaneous Authentication of Equals (SAE), which replaces the vulnerable four-way handshake.</p>
+
+  <div class="comparison">
+    <div class="comp-card bad">
+      <div class="comp-label">WPA2</div>
+      <h3>Vulnerable handshake</h3>
+      <p>Handshake can be captured and cracked offline. Weak passwords fall quickly. No forward secrecy.</p>
+    </div>
+    <div class="comp-card good">
+      <div class="comp-label">WPA3</div>
+      <h3>SAE authentication</h3>
+      <p>Even if password is captured, it cannot be cracked offline. Forward secrecy protects past sessions.</p>
+    </div>
+  </div>
+
+  <p>WPA3 also provides forward secrecy — meaning even if an attacker somehow gets your password later, they can't use it to decrypt traffic they captured in the past. Each session gets a unique encryption key.</p>
+
+  <h2>What your office should actually do</h2>
+
+  <h3>Step 1: Check if your router supports WPA3</h3>
+  <p>Log into your router admin panel (usually at 192.168.1.1 or 192.168.0.1) and look at the wireless security settings. If you see WPA3 or WPA2/WPA3 mixed mode as an option — enable it. Mixed mode lets newer devices use WPA3 while older devices still connect via WPA2.</p>
+
+  <h3>Step 2: If your router doesn't support WPA3</h3>
+  <p>Consumer routers from before 2019 generally don't support WPA3. If yours is in that category, upgrading your router is worth serious consideration — especially if you're handling sensitive client data. A business-grade Wi-Fi 6 router with WPA3 runs $150-300 and will serve your office well for years.</p>
+
+  <h3>Step 3: Strengthen your WPA2 password in the meantime</h3>
+  <p>If you can't upgrade immediately, make your Wi-Fi password significantly harder to crack:</p>
+  <ul>
+    <li>Minimum 20 characters</li>
+    <li>Use a passphrase — a random string of words works well (example: correct-horse-battery-staple)</li>
+    <li>No dictionary words, names, or addresses</li>
+    <li>Change it immediately if any former employee knew it</li>
+  </ul>
+
+  <h3>Step 4: Separate your networks</h3>
+  <p>Regardless of WPA2 or WPA3, make sure your client-facing guest network is completely isolated from your internal staff network. Even if someone cracks your guest network password, they should have no path to your internal systems.</p>
+
+  <div class="callout">
+    <div class="callout-label">Bottom line for law firms</div>
+    <p>ABA Rule 1.6 requires you to make reasonable efforts to protect client information. Running an unpatched WPA2 network with a weak password in 2026 is difficult to defend as reasonable. WPA3 or a hardened WPA2 configuration with proper network segmentation is the standard you should be meeting.</p>
+  </div>
+
+  <h2>Not sure where your office stands?</h2>
+
+  <p>A Tier 1 security audit covers your entire wireless setup — encryption standards, password strength, network segmentation, firmware versions, and more. You get a plain-English report telling you exactly what needs attention and in what order. It starts at $500 and takes about two hours of your time.</p>
+
+  <p>If you'd rather talk through it first, book a free 15-minute call and I'll tell you what I'd look for in your specific setup.</p>
+
+  <div class="cta-box">
+    <h2>Get your Wi-Fi security assessed</h2>
+    <p>Find out exactly what your wireless setup looks like from an attacker's perspective.</p>
+    <a href="https://calendly.com/jose-binarytsolutions/30min" class="btn">Book Free Call</a>
+  </div>
+
+</article>
+
+<footer>
+  <p>© 2026 Binary T Solutions | San Antonio, TX | <a href="mailto:info@binarytsolutions.com">info@binarytsolutions.com</a></p>
+</footer>
+
+</body>
+</html>
