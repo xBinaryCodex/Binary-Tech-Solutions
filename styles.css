@@ -1952,7 +1952,7 @@ section {
 
 .contact__layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  grid-template-columns: 1fr 2fr;
   gap: clamp(var(--space-8), 4vw, var(--space-12));
   align-items: start;
 }
@@ -2160,34 +2160,48 @@ a.contact-detail__value:hover { color: var(--color-cyan); }
 
 .form-privacy svg { color: var(--color-text-subtle); flex-shrink: 0; }
 
-/* Responsive contact —
-   auto-fit handles the 2→1 col break naturally (~640px).
-   Below that, style the stacked info card to look intentional. */
-@media (max-width: 660px) {
-  /* Details go 2-up so the card fills its full width */
+/* Responsive contact */
+@media (max-width: 700px) {
+  /* Stack on mobile */
+  .contact__layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Center info card content when stacked */
+  .contact-info-card {
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-detail {
+    justify-content: center;
+  }
+
+  .contact-detail > div {
+    text-align: left; /* keep label/value left-aligned inside centered row */
+  }
+
+  .contact-response-note {
+    justify-content: center;
+  }
+
+  /* Details in 2 columns so card fills width */
   .contact-detail-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-4) var(--space-6);
+    width: 100%;
   }
-
-  /* Calendly row goes horizontal */
-  .contact-calendly {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-4);
-  }
-
-  .contact-calendly__label { margin: 0; text-align: left; }
 }
 
 @media (max-width: 480px) {
-  .contact-detail-list { grid-template-columns: 1fr; }
-  .contact-calendly { flex-direction: column; }
-  .contact-form { padding: var(--space-6); }
-  .contact-info-card { padding: var(--space-6); }
-  .form-row--2 { flex-direction: column; }
+  .contact-detail-list  { grid-template-columns: 1fr; }
+  .contact-info-card    { text-align: left; align-items: flex-start; }
+  .contact-detail       { justify-content: flex-start; }
+  .contact-response-note { justify-content: flex-start; }
+  .contact-form         { padding: var(--space-6); }
+  .contact-info-card    { padding: var(--space-6); }
+  .form-row--2          { flex-direction: column; }
 }
 
 /* ─────────────────────────────────────────────────────────────────
