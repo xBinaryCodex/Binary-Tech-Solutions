@@ -1,0 +1,17 @@
+# ══════════════════════════════════════════════════════════════════
+# Binary Tech Solutions — robots.txt
+# https://binarytsolutions.com/robots.txt
+# ══════════════════════════════════════════════════════════════════
+
+# Allow all well-behaved crawlers full access
+User-agent: *
+Allow: /
+
+# Block access to any admin, staging, or backend paths you add later
+# (uncomment and adjust as needed)
+# Disallow: /admin/
+# Disallow: /staging/
+# Disallow: /api/
+
+# Sitemap location — submit this URL to Google Search Console too
+Sitemap: https://binarytsolutions.com/sitemap.xml
