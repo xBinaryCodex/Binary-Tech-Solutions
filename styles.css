@@ -1952,7 +1952,7 @@ section {
 
 .contact__layout {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   gap: clamp(var(--space-8), 4vw, var(--space-12));
   align-items: start;
 }

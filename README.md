@@ -17,9 +17,9 @@ Binary-Tech-Solutions/
 ├── robots.txt                  # Crawler instructions
 ├── README.md                   # This file
 └── blog/
-    ├── 5-things-law-firm-network-doing-wrong.html
-    ├── wpa2-not-enough-professional-offices.html
-    └── phishing-attacks-target-law-firms.html
+    ├── 5-law-firm-network-mistakes.html
+    ├── wpa2-not-enough.html
+    └── phishing-law-firms.html
 ```
 
 ---

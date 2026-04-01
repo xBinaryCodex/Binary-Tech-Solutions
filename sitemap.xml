@@ -66,21 +66,21 @@
   <!-- Update lastmod to the publish date (or last edit date).      -->
 
   <url>
-    <loc>https://binarytsolutions.com/blog/5-things-law-firm-network-doing-wrong.html</loc>
+    <loc>https://binarytsolutions.com/blog/5-law-firm-network-mistakes.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://binarytsolutions.com/blog/wpa2-not-enough-professional-offices.html</loc>
+    <loc>https://binarytsolutions.com/blog/wpa2-not-enough.html</loc>
     <lastmod>2026-02-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://binarytsolutions.com/blog/phishing-attacks-target-law-firms.html</loc>
+    <loc>https://binarytsolutions.com/blog/phishing-law-firms.html</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
