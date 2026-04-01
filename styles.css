@@ -1952,8 +1952,8 @@ section {
 
 .contact__layout {
   display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: clamp(var(--space-10), 6vw, var(--space-16));
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: clamp(var(--space-8), 4vw, var(--space-12));
   align-items: start;
 }
 
@@ -2161,12 +2161,10 @@ a.contact-detail__value:hover { color: var(--color-cyan); }
 .form-privacy svg { color: var(--color-text-subtle); flex-shrink: 0; }
 
 /* Responsive contact */
-@media (max-width: 960px) {
+@media (max-width: 720px) {
   .contact__layout {
     grid-template-columns: 1fr;
   }
-  .contact__info { order: 2; }
-  .contact__form-col { order: 1; }
 }
 
 @media (max-width: 600px) {
