@@ -1,5 +1,5 @@
 /**
- * Binary T Solutions — main.js
+ * Binary Tech Solutions — main.js
  * Handles: sticky nav, hamburger menu, custom cursor,
  *          hero canvas animation, scroll animations (Intersection Observer)
  */
