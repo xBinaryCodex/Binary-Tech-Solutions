@@ -2372,3 +2372,82 @@ a.contact-detail__value:hover { color: var(--color-cyan); }
   .footer__brand { grid-column: span 1; }
   .footer__bottom { flex-direction: column; align-items: flex-start; }
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   CONTACT FORM — success, error, loading states
+───────────────────────────────────────────────────────────────── */
+
+/* Success card */
+.form-success {
+  background: var(--color-bg-card);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-5);
+}
+
+.form-success__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-green-dim);
+  border: 2px solid rgba(0, 255, 136, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-green);
+}
+
+.form-success__title {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.form-success__text {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  max-width: 380px;
+  margin: 0;
+}
+
+/* Inline error */
+.form-error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: #ff6080;
+  padding: var(--space-3) var(--space-4);
+  background: rgba(255, 96, 128, 0.08);
+  border: 1px solid rgba(255, 96, 128, 0.25);
+  border-radius: var(--radius-md);
+}
+
+.form-error a {
+  color: #ff6080;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Spinner animation on submit button */
+.form-submit__spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Disabled button while sending */
+.form-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}

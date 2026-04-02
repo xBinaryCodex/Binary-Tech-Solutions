@@ -360,6 +360,88 @@ function initSmoothScroll() {
 }
 
 /* ─────────────────────────────────────────────────────────────────
+   6. CONTACT FORM — AJAX submission via Formsubmit.co
+   No account needed. First submission sends a verification email
+   to info@binarytsolutions.com — click confirm once, then all
+   future submissions go straight to your inbox automatically.
+───────────────────────────────────────────────────────────────── */
+function initContactForm() {
+  const form      = document.getElementById('contactForm');
+  const btn       = document.getElementById('formSubmitBtn');
+  const success   = document.getElementById('formSuccess');
+  const error     = document.getElementById('formError');
+  if (!form || !btn) return;
+
+  const icon    = btn.querySelector('.form-submit__icon');
+  const spinner = btn.querySelector('.form-submit__spinner');
+  const label   = btn.querySelector('.form-submit__label');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Basic client-side validation
+    const name  = form.querySelector('#name');
+    const email = form.querySelector('#email');
+    if (!name.value.trim() || !email.value.trim()) {
+      name.value.trim()  || name.focus();
+      email.value.trim() || email.focus();
+      return;
+    }
+
+    // Honeypot check — if filled by a bot, silently bail
+    const honey = form.querySelector('[name="_honey"]');
+    if (honey && honey.value) return;
+
+    // Loading state
+    btn.disabled    = true;
+    icon.style.display    = 'none';
+    spinner.style.display = 'block';
+    label.textContent     = 'Sending…';
+    if (error) error.hidden = true;
+
+    // Build payload
+    const data = {
+      name:     form.querySelector('#name').value.trim(),
+      email:    form.querySelector('#email').value.trim(),
+      business: form.querySelector('#business').value.trim(),
+      phone:    form.querySelector('#phone').value.trim(),
+      service:  form.querySelector('#service').value,
+      message:  form.querySelector('#message').value.trim(),
+    };
+
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/info@binarytsolutions.com', {
+        method:  'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept':       'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const json = await res.json();
+
+      if (res.ok && json.success) {
+        // Hide form, show success message
+        form.hidden    = true;
+        success.hidden = false;
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        throw new Error('Submission failed');
+      }
+
+    } catch (_) {
+      // Show inline error, reset button
+      if (error) error.hidden = false;
+      btn.disabled          = false;
+      icon.style.display    = 'block';
+      spinner.style.display = 'none';
+      label.textContent     = 'Send Message';
+    }
+  });
+}
+
+/* ─────────────────────────────────────────────────────────────────
    INIT — run everything on DOMContentLoaded
 ───────────────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
@@ -369,4 +451,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroCanvas();
   initScrollAnimations();
   initSmoothScroll();
+  initContactForm();
 });

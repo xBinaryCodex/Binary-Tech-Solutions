@@ -880,15 +880,32 @@
 
         <!-- Right: contact form -->
         <div class="contact__form-col" data-animate="fade-up" data-delay="150">
+
+          <!-- Success message (hidden until form submits) -->
+          <div class="form-success" id="formSuccess" hidden aria-live="polite">
+            <div class="form-success__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3 class="form-success__title">Message Sent!</h3>
+            <p class="form-success__text">
+              Thanks for reaching out. We'll get back to you within 24 hours on business days.
+            </p>
+            <a href="https://calendly.com/jose-binarytsolutions/30min"
+               class="btn btn--primary"
+               target="_blank" rel="noopener noreferrer">
+              Book a Free Call Instead
+            </a>
+          </div>
+
           <form
             class="contact-form"
             id="contactForm"
-            action="mailto:info@binarytsolutions.com"
-            method="POST"
-            enctype="text/plain"
             novalidate
             aria-label="Contact form"
           >
+            <!-- Honeypot — spam bots fill this, humans don't -->
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
             <div class="form-row form-row--2">
               <div class="form-field">
                 <label class="form-label" for="name">
@@ -972,10 +989,18 @@
               ></textarea>
             </div>
 
-            <button type="submit" class="btn btn--primary btn--lg form-submit">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              Send Message
+            <button type="submit" class="btn btn--primary btn--lg form-submit" id="formSubmitBtn">
+              <svg class="form-submit__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              <svg class="form-submit__spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" style="display:none"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+              <span class="form-submit__label">Send Message</span>
             </button>
+
+            <!-- Error message -->
+            <p class="form-error" id="formError" hidden role="alert">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              Something went wrong. Please email us directly at
+              <a href="mailto:info@binarytsolutions.com">info@binarytsolutions.com</a>.
+            </p>
 
             <p class="form-privacy">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
