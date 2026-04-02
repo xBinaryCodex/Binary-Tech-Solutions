@@ -122,7 +122,7 @@ When you're ready to replace the "Book Free Call" button with a real inline Cale
    ```html
    <!-- Calendly inline widget begin -->
    <div class="calendly-inline-widget"
-        data-url="https://calendly.com/jose-safedayssecurity/30min"
+        data-url="https://calendly.com/jose-binarytsolutions/30min"
         style="min-width:320px;height:700px;">
    </div>
    <script type="text/javascript"
