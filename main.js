@@ -423,8 +423,9 @@ function initContactForm() {
 
       if (res.ok && json.success) {
         // Hide form, show success message
-        form.hidden    = true;
-        success.hidden = false;
+        form.style.display    = 'none';
+        success.style.display = 'flex';
+        success.removeAttribute('hidden');
         success.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
         throw new Error('Submission failed');
@@ -432,7 +433,10 @@ function initContactForm() {
 
     } catch (_) {
       // Show inline error, reset button
-      if (error) error.hidden = false;
+      if (error) {
+        error.style.display = 'flex';
+        error.removeAttribute('hidden');
+      }
       btn.disabled          = false;
       icon.style.display    = 'block';
       spinner.style.display = 'none';

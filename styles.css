@@ -105,6 +105,10 @@
 /* ─────────────────────────────────────────────────────────────────
    2. RESET & BOX MODEL
 ───────────────────────────────────────────────────────────────── */
+
+/* Ensure the HTML hidden attribute always wins,
+   even when a class sets display: flex/grid/block */
+[hidden] { display: none !important; }
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -2377,8 +2381,9 @@ a.contact-detail__value:hover { color: var(--color-cyan); }
    CONTACT FORM — success, error, loading states
 ───────────────────────────────────────────────────────────────── */
 
-/* Success card */
+/* Success card — hidden by default, shown via JS */
 .form-success {
+  display: none;
   background: var(--color-bg-card);
   border: 1px solid rgba(0, 255, 136, 0.3);
   border-radius: var(--radius-xl);
@@ -2415,9 +2420,9 @@ a.contact-detail__value:hover { color: var(--color-cyan); }
   margin: 0;
 }
 
-/* Inline error */
+/* Inline error — hidden by default, shown via JS */
 .form-error {
-  display: flex;
+  display: none;
   align-items: center;
   gap: var(--space-2);
   font-size: var(--text-sm);
