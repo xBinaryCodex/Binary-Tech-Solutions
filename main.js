@@ -1,5 +1,5 @@
 /**
- * Binary Tech Solutions — main.js
+ * SafeDays Security — main.js
  * Handles: sticky nav, hamburger menu, custom cursor,
  *          hero canvas animation, scroll animations (Intersection Observer)
  */
@@ -362,7 +362,7 @@ function initSmoothScroll() {
 /* ─────────────────────────────────────────────────────────────────
    6. CONTACT FORM — AJAX submission via Formsubmit.co
    No account needed. First submission sends a verification email
-   to info@binarytsolutions.com — click confirm once, then all
+   to info@safedayssecurity.com — click confirm once, then all
    future submissions go straight to your inbox automatically.
 ───────────────────────────────────────────────────────────────── */
 function initContactForm() {
@@ -410,7 +410,7 @@ function initContactForm() {
     };
 
     try {
-      const res = await fetch('https://formsubmit.co/ajax/info@binarytsolutions.com', {
+      const res = await fetch('https://formsubmit.co/ajax/info@safedayssecurity.com', {
         method:  'POST',
         headers: {
           'Content-Type': 'application/json',

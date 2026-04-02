@@ -1,6 +1,6 @@
 # ══════════════════════════════════════════════════════════════════
-# Binary Tech Solutions — robots.txt
-# https://binarytsolutions.com/robots.txt
+# SafeDays Security — robots.txt
+# https://safedayssecurity.com/robots.txt
 # ══════════════════════════════════════════════════════════════════
 
 # Allow all well-behaved crawlers full access
@@ -14,4 +14,4 @@ Allow: /
 # Disallow: /api/
 
 # Sitemap location — submit this URL to Google Search Console too
-Sitemap: https://binarytsolutions.com/sitemap.xml
+Sitemap: https://safedayssecurity.com/sitemap.xml

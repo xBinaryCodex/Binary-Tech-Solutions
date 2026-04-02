@@ -1,6 +1,6 @@
-# Binary Tech Solutions — Website
+# SafeDays Security — Website
 
-**binarytsolutions.com** — Cybersecurity consulting for law firms and small professional offices in San Antonio, TX.
+**safedayssecurity.com** — Cybersecurity consulting for law firms and small professional offices in San Antonio, TX.
 
 ---
 
@@ -59,7 +59,7 @@ Make sure you have all files committed and your project folder is ready to uploa
 
 ### Step 4 — Point your domain
 
-1. hPanel → **Domains** → make sure `binarytsolutions.com` points to your hosting
+1. hPanel → **Domains** → make sure `safedayssecurity.com` points to your hosting
 2. DNS propagation can take up to 48 hours (usually under 2 hours)
 
 ### Step 5 — Enable SSL
@@ -77,9 +77,9 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 ### Step 6 — Submit sitemap to Google
 
 1. Go to [Google Search Console](https://search.google.com/search-console)
-2. Add your property: `https://binarytsolutions.com`
+2. Add your property: `https://safedayssecurity.com`
 3. Verify ownership (HTML file method is easiest with Hostinger File Manager)
-4. Go to **Sitemaps** → submit `https://binarytsolutions.com/sitemap.xml`
+4. Go to **Sitemaps** → submit `https://safedayssecurity.com/sitemap.xml`
 
 ---
 
@@ -122,7 +122,7 @@ When you're ready to replace the "Book Free Call" button with a real inline Cale
    ```html
    <!-- Calendly inline widget begin -->
    <div class="calendly-inline-widget"
-        data-url="https://calendly.com/jose-binarytsolutions/30min"
+        data-url="https://calendly.com/jose-safedayssecurity/30min"
         style="min-width:320px;height:700px;">
    </div>
    <script type="text/javascript"
@@ -146,7 +146,7 @@ Replace the `JT` initials placeholder in the About section:
    ```html
    <img
      src="assets/jose-profile.webp"
-     alt="Jose, founder of Binary Tech Solutions, network security technician"
+     alt="Jose, founder of SafeDays Security, network security technician"
      width="480"
      height="600"
      loading="lazy"
@@ -173,7 +173,7 @@ The contact form currently uses `action="mailto:"` as a fallback. To get real fo
 
 **Option A — Formspree (free tier, no backend needed):**
 1. Sign up at [formspree.io](https://formspree.io)
-2. Create a form pointing to `info@binarytsolutions.com`
+2. Create a form pointing to `info@safedayssecurity.com`
 3. Replace the `<form>` action:
    ```html
    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
@@ -218,4 +218,4 @@ The contact form currently uses `action="mailto:"` as a fallback. To get real fo
 
 ---
 
-*Built for Binary Tech Solutions · San Antonio, TX · binarytsolutions.com*
+*Built for SafeDays Security · San Antonio, TX · safedayssecurity.com*
