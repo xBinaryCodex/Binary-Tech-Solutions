@@ -4,7 +4,11 @@
  *          hero canvas animation, scroll animations (Intersection Observer)
  */
 
-'use strict';
+// Import Vercel Analytics
+import { inject } from '@vercel/analytics';
+
+// Initialize Vercel Analytics
+inject();
 
 /* ─────────────────────────────────────────────────────────────────
    UTILITY: Throttle
